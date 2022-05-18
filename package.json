@@ -1,0 +1,29 @@
+{
+  "name": "io-assigment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/tests/"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbmdasilva/io-assigment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbmdasilva/io-assigment/issues"
+  },
+  "homepage": "https://github.com/mbmdasilva/io-assigment#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.22.1",
+    "jest": "^28.1.0"
+  }
+}
