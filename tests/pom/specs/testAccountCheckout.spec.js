@@ -6,7 +6,6 @@ const {AccountPage} = require('../models/Account.page');
 const { describe } = require('yargs');
 const { chromium } = require('@playwright/test');
 const {CheckoutPage}= require('../models/Checkout.page');
-const {SettingsPage} = require('../models/Settings.page');
 
 test.describe('PayPalm page', () => {
     let browser = null;
@@ -14,7 +13,6 @@ test.describe('PayPalm page', () => {
     let loginPage = null;
     let accountPage = null;
     let checkoutPage = null;
-    let settingsPage =null;
     let context = null;
 
     test.beforeAll( async ()=>{
@@ -25,7 +23,6 @@ test.describe('PayPalm page', () => {
         await loginPage.navigate(); 
         checkoutPage = new CheckoutPage(page);
         await checkoutPage.navigate(); 
-        settingsPage = new SettingsPage(page);
         accountPage = new AccountPage (page);
         await accountPage.navigate(); 
        
@@ -64,7 +61,4 @@ test.describe('PayPalm page', () => {
         expect(await page.locator('h3:has-text("Products")')).toBeVisible;
     })
 
-    test('Should be able to click on account', async()=>{
-        await accountPage. clickLogOut();
-    })
 });

@@ -23,7 +23,7 @@ const config = {
     //   use: { ...devices['Desktop Safari'] },
     // },
   ],
-//   reporter: [ ['html', { outputFolder: 'never' }] ],
+   reporter: [ ['html', { outputFolder: 'on-failure' }] ],
 };
 
 
