@@ -8,9 +8,11 @@ class LoginPage extends BasePage {
         this.password = 'input[name="j_password"]';
         this.signInButton = 'button:has-text("Sign in")';
     }
+    
     async navigate(){
         await super.navigate();
     }
+
     async login(username, password){
         await this.page.fill(this.username,username);
         await this.page.fill(this.password,password);

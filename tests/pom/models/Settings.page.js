@@ -6,4 +6,4 @@ class SettingsPage extends BasePage {
 
     }
 }
-module.exports = SettingsPage;
+module.exports = {SettingsPage};
