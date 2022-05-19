@@ -3,6 +3,7 @@ const BasePage = require ('./Base.page');
 class CheckoutPage extends BasePage {
     constructor(page){
         super(page);
+        
         //locatos
         this.payButton = '#payButton';
         this.returnBackButton = 'text=Return back';
@@ -18,10 +19,8 @@ class CheckoutPage extends BasePage {
         await this.page.locator(this.payButton).click();
     }
 
-
     async clickReturn(){
         await this.page.locator(this.returnBackButton).click();
-       // await page.waitForSelector('h4.ist-group-item-heading')
     }
 
     async paymentCardInformation(){

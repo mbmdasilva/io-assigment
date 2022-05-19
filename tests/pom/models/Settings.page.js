@@ -3,13 +3,14 @@ const BasePage = require ('./Base.page');
 class SettingsPage extends BasePage {
     constructor(page){
         super(page);
+        
         //locators
         this.firstname = 'input[name="firstName"]';
         this.lastname = 'input[name="lastName"]';
         this.email ='input[name="email"]';
-        this.save = 'text=Save';
-        
+        this.save = 'text=Save'; 
     }
+
     async enterFirstName(){
         await this.page.locator(this.firstname).click();  
         await this.page.locator(this.firstname).fill('Matthew');
