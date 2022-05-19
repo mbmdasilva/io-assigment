@@ -2,6 +2,7 @@ const BasePage = require ('./Base.page');
 class AccountPage extends BasePage {
     constructor(page){
         super(page);
+
         //locators
         this.loggedIn = '.h4.list-group-item-heading';
         this.accountDropDowm = 'text=Account';
@@ -15,9 +16,6 @@ class AccountPage extends BasePage {
         this.gotoCheckout = 'button.btn.btn-primary.btn-lg.btn-block.btn-raised';
         this.logOut = 'text=Log out';
         this.settings = 'a:has-text("Settings")';
-    
-        
-
     }
    
     async selectProducts(){
@@ -30,6 +28,7 @@ class AccountPage extends BasePage {
 
         ])
     }
+    
     async proceedToCheckout(){
         await this.page.locator(this.gotoCheckout).click();
     }

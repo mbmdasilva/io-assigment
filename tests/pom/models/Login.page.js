@@ -3,12 +3,13 @@ const BasePage = require ('./Base.page');
 class LoginPage extends BasePage {
     constructor(page){
         super(page);
+        
         //locators
         this.username = 'input[name="j_username"]';
         this.password = 'input[name="j_password"]';
         this.signInButton = 'button:has-text("Sign in")';
     }
-    
+
     async navigate(){
         await super.navigate();
     }
